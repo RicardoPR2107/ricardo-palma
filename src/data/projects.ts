@@ -16,6 +16,8 @@ export type Project = {
   video: { mp4: string; webm: string; poster: string }
   /** Fondo detrás de la imagen principal, para que las franjas libres se fundan con la captura */
   coverBg?: string
+  /** 'cover' llena el recuadro recortando la parte de abajo de la captura; por defecto se muestra completa */
+  coverFit?: 'contain' | 'cover'
   repo: string
   /** Solo si el proyecto está desplegado */
   demo?: string
@@ -47,7 +49,7 @@ export const projects: Project[] = [
       { src: `${tf}/movil-dashboard-oscuro.webp`, alt: 'Dashboard en el teléfono, tema oscuro' },
     ],
     video: { mp4: `${tf}/demo.mp4`, webm: `${tf}/demo.webm`, poster: `${tf}/demo-poster.jpg` },
-    coverBg: 'linear-gradient(#faf8f2 50%, #f3eee5 50%)',
+    coverFit: 'cover',
     repo: 'https://github.com/RicardoPR2107/taskflow',
     demo: 'https://taskflow-lrr4.onrender.com',
   },
@@ -72,7 +74,7 @@ export const projects: Project[] = [
       { src: `${sp}/movil-historial.webp`, alt: 'Historial en el teléfono' },
     ],
     video: { mp4: `${sp}/demo.mp4`, webm: `${sp}/demo.webm`, poster: `${sp}/demo-poster.jpg` },
-    coverBg: 'linear-gradient(90deg, #124a33 50%, #f4f7f2 50%)',
+    coverFit: 'cover',
     repo: 'https://github.com/RicardoPR2107/Simplify',
   },
 ]

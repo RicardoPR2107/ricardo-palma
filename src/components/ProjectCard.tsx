@@ -22,7 +22,7 @@ export function ProjectCard({ project }: { project: Project }) {
           src={cover.src}
           alt={cover.alt}
           loading="lazy"
-          className="absolute inset-0 size-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+          className={`absolute inset-0 size-full ${project.coverFit === 'cover' ? 'object-cover object-top' : 'object-contain'} transition-transform duration-500 group-hover:scale-[1.03]`}
         />
         <span className="absolute inset-0 bg-ink/0 transition-colors group-hover:bg-ink/15" aria-hidden="true" />
         <span
