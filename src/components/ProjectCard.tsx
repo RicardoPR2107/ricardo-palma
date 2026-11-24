@@ -33,35 +33,35 @@ export function ProjectCard({ project }: { project: Project }) {
         </span>
       </button>
 
-      <div className="flex flex-col gap-3 px-5 py-5">
+      <div className="flex flex-col gap-4 px-6 py-7 sm:px-8 sm:py-8">
         <div className="flex items-center gap-3">
-          <img src={project.logo} alt="" width={36} height={36} className="size-9 shrink-0" />
-          <h3 className="text-2xl font-bold">{project.name}</h3>
+          <img src={project.logo} alt="" width={44} height={44} className="size-11 shrink-0 rounded-[12px] dark:ring-1 dark:ring-white/25" />
+          <h3 className="text-3xl font-bold">{project.name}</h3>
         </div>
-        <p className="text-sm leading-relaxed">{project.description}</p>
+        <p className="text-[15px] leading-relaxed sm:text-base">{project.description}</p>
 
         <div>
-          <p className="font-mono text-[11px] text-accent">EL RETO</p>
-          <p className="mt-0.5 text-sm leading-relaxed">{project.challenge}</p>
+          <p className="font-mono text-xs text-accent">EL RETO</p>
+          <p className="mt-1 text-[15px] leading-relaxed">{project.challenge}</p>
         </div>
         <div>
-          <p className="font-mono text-[11px] text-accent">LO QUE APRENDÍ</p>
-          <p className="mt-0.5 text-sm leading-relaxed">{project.learned}</p>
+          <p className="font-mono text-xs text-accent">LO QUE APRENDÍ</p>
+          <p className="mt-1 text-[15px] leading-relaxed">{project.learned}</p>
         </div>
 
         <ul className="flex flex-wrap gap-1.5" aria-label="Tecnologías principales">
           {project.techs.map((tech) => (
-            <li key={tech} className="border border-muted px-2 py-0.5 font-mono text-[11px]">
+            <li key={tech} className="border border-muted px-2.5 py-1 font-mono text-xs">
               {tech}
             </li>
           ))}
         </ul>
 
-        <div className="mt-1 flex flex-wrap items-center gap-2.5">
+        <div className="mt-2 flex flex-wrap items-center gap-3">
           <button
             type="button"
             onClick={() => setVideoOpen(true)}
-            className="mr-1 inline-flex items-center gap-1.5 font-mono text-[11px] text-accent underline underline-offset-4 hover:no-underline"
+            className="mr-1 inline-flex items-center gap-1.5 font-mono text-xs text-accent underline underline-offset-4 hover:no-underline"
           >
             <PlayIcon size={14} />
             ver video

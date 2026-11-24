@@ -3,6 +3,9 @@
 @import '@fontsource/jetbrains-mono/400.css';
 @import '@fontsource/jetbrains-mono/500.css';
 
+/* Variante dark: según el tema elegido en la página, no solo el del sistema */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
 /* Paleta Cobalto: modo claro */
 :root {
   --paper: #f2f1ec;
@@ -66,7 +69,7 @@
   }
 
   section[id] {
-    scroll-margin-top: 5rem;
+    scroll-margin-top: 6rem;
   }
 
   /* Tailwind 4 deja el cursor normal en los botones: se recupera la manito */
@@ -92,7 +95,11 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center gap-2 border border-line bg-paper px-3.5 py-2 font-mono text-xs text-ink transition-colors hover:border-accent hover:text-accent;
+    @apply inline-flex items-center gap-2 border border-line bg-paper px-4 py-2.5 font-mono text-[13px] text-ink transition-colors hover:border-accent hover:text-accent;
+  }
+
+  .btn-lg {
+    @apply gap-2.5 px-5 py-3 text-sm;
   }
 
   .btn-accent {
@@ -100,7 +107,7 @@
   }
 
   .section-title {
-    @apply font-mono text-[13px] tracking-[0.08em] text-accent uppercase;
+    @apply flex items-center gap-5 font-mono text-lg font-medium tracking-[0.14em] text-accent uppercase after:h-px after:flex-1 after:bg-line sm:text-xl;
   }
 
   .label {

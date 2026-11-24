@@ -72,6 +72,7 @@ export const projects: Project[] = [
       { src: `${sp}/movil-historial.webp`, alt: 'Historial en el teléfono' },
     ],
     video: { mp4: `${sp}/demo.mp4`, webm: `${sp}/demo.webm`, poster: `${sp}/demo-poster.jpg` },
+    coverBg: 'linear-gradient(90deg, #124a33 50%, #f4f7f2 50%)',
     repo: 'https://github.com/RicardoPR2107/Simplify',
   },
 ]
