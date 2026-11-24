@@ -1,5 +1,7 @@
 # Portafolio · Ricardo A. Palma
 
+🌐 **En vivo:** https://ricardoapalma.vercel.app
+
 Sitio personal con mi presentación, experiencia y proyectos (TaskFlow y Simplify). Estilo de plano técnico, con modo claro y oscuro.
 
 ## Tecnologías
@@ -50,4 +52,6 @@ ffmpeg -ss 7 -i demo.mp4 -vframes 1 demo-poster.jpg
 3. Importa el repositorio. Vercel detecta Vite solo (comando `npm run build`, carpeta `dist`).
 4. Pulsa **Deploy**. Cada vez que subas cambios a GitHub, el sitio se actualiza solo.
 
-Después del primer despliegue, cambia en `index.html` la línea `og:image` por la dirección completa (por ejemplo `https://tu-sitio.vercel.app/og-image.png`). LinkedIn y WhatsApp solo muestran la vista previa con una dirección completa.
+Si el proyecto no está conectado a GitHub, publica los cambios desde la carpeta con `npx vercel --prod`.
+
+Las etiquetas `og:url` y `og:image` de `index.html` usan la dirección completa del sitio: LinkedIn y WhatsApp solo muestran la vista previa así. Si cambias de dominio, actualízalas.
