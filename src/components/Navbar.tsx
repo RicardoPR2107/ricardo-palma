@@ -1,3 +1,4 @@
+import { useActiveSection } from '../hooks/useActiveSection'
 import { useTheme } from '../hooks/useTheme'
 import { MoonIcon, SunIcon } from './Icons'
 
@@ -7,8 +8,11 @@ const links = [
   { href: '#proyectos', label: 'Proyectos' },
 ]
 
+const sectionIds = links.map((link) => link.href.slice(1))
+
 export function Navbar() {
   const { theme, toggle } = useTheme()
+  const active = useActiveSection(sectionIds)
   const isDark = theme === 'dark'
 
   return (
@@ -22,7 +26,8 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className={`font-mono text-xs tracking-[0.08em] uppercase transition-colors hover:text-accent sm:text-[15px] sm:tracking-[0.12em] ${link.desktopOnly ? 'hidden sm:inline' : ''}`}
+              aria-current={active === link.href.slice(1) ? 'true' : undefined}
+              className={`font-mono text-xs tracking-[0.08em] uppercase underline-offset-[10px] transition-colors hover:text-accent sm:text-[15px] sm:tracking-[0.12em] ${active === link.href.slice(1) ? 'text-accent underline decoration-2' : ''} ${link.desktopOnly ? 'hidden sm:inline' : ''}`}
             >
               {link.label}
             </a>

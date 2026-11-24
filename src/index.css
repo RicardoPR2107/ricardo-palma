@@ -69,7 +69,7 @@
   }
 
   section[id] {
-    scroll-margin-top: 6rem;
+    scroll-margin-top: 8rem;
   }
 
   /* Tailwind 4 deja el cursor normal en los botones: se recupera la manito */
