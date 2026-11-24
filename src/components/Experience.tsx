@@ -3,9 +3,9 @@ import { Highlight } from './Highlight'
 
 export function Experience() {
   return (
-    <section id="experiencia" className="mt-24 sm:mt-32">
+    <section id="experiencia" className="mt-32 sm:mt-44">
       <h2 className="section-title">Experiencia</h2>
-      <ol className="mt-6 space-y-4">
+      <ol className="mt-8 space-y-4">
         {experience.map((job) => (
           <li key={job.company + job.period} className="flex gap-5 border border-line bg-paper px-6 py-7 sm:px-8 sm:py-8">
             <div className="flex w-2.5 flex-col items-center pt-1.5" aria-hidden="true">
